@@ -1,3 +1,16 @@
 title = "IL随记"
 theme = "hyde"
 publishDir = "docs"
+
+[params]
+    description = "随手写写"
+    googleAnalytics = ""
+    layoutReverse = true
+    theme = "hyde"
+    themeColor = "theme-base-84"
+
+
+[Menus]
+  main = [
+      {Name = "Github", URL = "https://github.com/illuz/"},
+  ]

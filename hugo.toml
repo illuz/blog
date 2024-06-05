@@ -6,7 +6,7 @@ summaryLength = 100
 
 [services]
   [services.disqus]
-    shortname = 'illuzsblog'
+    shortname = 'illuzsblognew'
   [services.googleAnalytics]
     id = 'G-L6RWMNY4C6'
 

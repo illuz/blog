@@ -28,7 +28,6 @@ ready(function(){
     window.title = true;
     window.addEventListener('scroll',
         function (e) {
-            debugger
             let scroll_height = window.scrollY;
             if (scroll_height > 200 && window.title) {
                 window.title = false;

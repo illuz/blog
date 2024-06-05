@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>IL随记</title>
-    <link>/</link>
-    <description>Recent content on IL随记</description>
+    <title>Daily on IL随记</title>
+    <link>/categories/daily/</link>
+    <description>Recent content in Daily on IL随记</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 04 Jun 2024 21:38:57 +0800</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/daily/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>写在最前</title>
       <link>/daily/write-ahead/</link>

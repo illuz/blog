@@ -1,7 +1,8 @@
 +++
 title = '写在最前'
+categories = ["daily"]
 date = 2024-06-04T21:38:57+08:00
-draft = true
+draft = false
 +++
 
 好久没写博客了，都快忘记之前写了啥了。

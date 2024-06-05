@@ -18,7 +18,7 @@ summaryLength = 100
     toc = "tocbot"
 
     dateTimeFormat = "2006/01/02 15:04"
-    notBlogDir = ["about"]
+    postDir = "post"
 
     [params.author]
         email = 'hcbabitong@gmail.com'

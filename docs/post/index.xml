@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Teches on IL随记</title>
-    <link>/tech/</link>
-    <description>Recent content in Teches on IL随记</description>
+    <title>Posts on IL随记</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on IL随记</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>hcbabitong@gmail.com (IlluZ)</managingEditor>
     <webMaster>hcbabitong@gmail.com (IlluZ)</webMaster>
     <lastBuildDate>Wed, 05 Jun 2024 10:16:37 +0800</lastBuildDate>
-    <atom:link href="/tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>博客修整及记录（进行中）</title>
-      <link>/tech/blog-build/</link>
+      <link>/post/tech/blog-build/</link>
       <pubDate>Wed, 05 Jun 2024 10:16:37 +0800</pubDate><author>hcbabitong@gmail.com (IlluZ)</author>
-      <guid>/tech/blog-build/</guid>
-      <description>目前待办 添加评论功能 Disqus favicon RSS 全文输出 增加文章搜索 Google Analytic 头部添加文章时间、Tags 展示、Category 展示 添加文章目录 TOC，参考 https://ichochy.com/ 的效果 代码展示效果优化 增加上一篇下一篇 增加相关文章 从 LogSeq 自动同步生成文章过</description>
+      <guid>/post/tech/blog-build/</guid>
+      <description>目前待办 添加评论功能 Disqus favicon RSS 全文输出 增加文章搜索，使用 algolia search Google Analytic 头部添加文章时间、Tags 展示、Category 展示 添加文章目录 TOC，参考 https://ichochy.com/ 的效果 代码展示效果优化 增加上一篇下一篇 增加相关文章 从 LogSeq 自动同步</description>
       <content:encoded><h2 id="目前待办">目前待办</h2>
 <ul>
 <li><input checked="" disabled="" type="checkbox"> 添加评论功能 Disqus</li>
 <li><input checked="" disabled="" type="checkbox"> favicon</li>
 <li><input checked="" disabled="" type="checkbox"> RSS 全文输出</li>
-<li><input disabled="" type="checkbox"> 增加文章搜索</li>
+<li><input disabled="" type="checkbox"> 增加文章搜索，使用 algolia search</li>
 <li><input checked="" disabled="" type="checkbox"> Google Analytic</li>
 <li><input checked="" disabled="" type="checkbox"> 头部添加文章时间、Tags 展示、Category 展示</li>
-<li><input disabled="" type="checkbox"> 添加文章目录 TOC，参考 <a href="https://ichochy.com/">https://ichochy.com/</a> 的效果</li>
+<li><input checked="" disabled="" type="checkbox"> 添加文章目录 TOC，参考 <a href="https://ichochy.com/">https://ichochy.com/</a> 的效果</li>
 <li><input disabled="" type="checkbox"> 代码展示效果优化</li>
-<li><input disabled="" type="checkbox"> 增加上一篇下一篇</li>
-<li><input disabled="" type="checkbox"> 增加相关文章</li>
+<li><input checked="" disabled="" type="checkbox"> 增加上一篇下一篇</li>
+<li><input checked="" disabled="" type="checkbox"> 增加相关文章</li>
 <li><input disabled="" type="checkbox"> 从 LogSeq 自动同步生成文章过来</li>
 </ul>
 <h2 id="评论功能-disqus">评论功能 Disqus</h2>
@@ -47,10 +47,52 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">services</span>]
 </span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">googleAnalytics</span>]
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">id</span> = <span style="color:#e6db74">&#39;G-xxx&#39;</span>
-</span></span></code></pre></div><h2 id="其它注意点">其它注意点</h2>
+</span></span></code></pre></div><h2 id="使用-algolia-进行文章搜索">使用 algolia 进行文章搜索</h2>
+<p>algolia 是个好东西，就是内容不太方便推过去，总不能一直跑个 node 程序。</p>
+<p>所以解决方案是：</p>
+<ol>
+<li>配一个 Github Action 跑 node 程序，把内容推到 algolia</li>
+<li>在 git push 时，触发 githook，本地去跑 node 程序，把内容推到 algolia</li>
+</ol>
+<p>用 Github Action 比较方便，我在其它环境下改文章也就不用去配置 node 环境了。</p>
+<p>参考文章： <a href="https://www.kiroule.com/article/automate-data-upload-to-algolia-index-with-github-actions/">https://www.kiroule.com/article/automate-data-upload-to-algolia-index-with-github-actions/</a></p>
+<p>TODO</p>
+<h2 id="其它注意点">其它注意点</h2>
 <ul>
 <li>需要将 hasCJKLanguage 设置成 true，否则 summaryLength 会以 word 为单位计算，而不是字符。</li>
 </ul>
+</content:encoded>
+    </item>
+    <item>
+      <title>写在最前</title>
+      <link>/post/daily/write-ahead/</link>
+      <pubDate>Tue, 04 Jun 2024 21:38:57 +0800</pubDate><author>hcbabitong@gmail.com (IlluZ)</author>
+      <guid>/post/daily/write-ahead/</guid>
+      <description>好久没写博客了，都快忘记之前写了啥了。 这次重新开个新博客，使用的是 Hugo 生成静态页面，而不是以及的 Hexo，因为我以前不会 Golang，现在会了一些 =w=，所以就试试吧。 这次写博客主打一个随心，近年来人有</description>
+      <content:encoded><p>好久没写博客了，都快忘记之前写了啥了。</p>
+<p>这次重新开个新博客，使用的是 Hugo 生成静态页面，而不是以及的 Hexo，因为我以前不会 Golang，现在会了一些 =w=，所以就试试吧。</p>
+<p>这次写博客主打一个随心，近年来人有点颓废，对很多新鲜事物都没有深入去研究，技术也落后了不少，希望借写些博客来找回年轻时啥都想学的感觉。
+顺便也把一些事情整块地记录一下，把原来 LogSeq 和 Notion 中有的没有碎片整理成章。</p>
+<p>所以博客内容会很杂，希望未来的我能理解。</p>
+<p>近期可能会写的东西：</p>
+<ul>
+<li>Hugo 折腾的一些简单记录
+<ul>
+<li>目前还差：Google Analytic、Disqus、TOC、代码高亮、RSS、文章搜索</li>
+</ul>
+</li>
+<li>LogSeq 自动同步到 Hugo，然后发布博客
+<ul>
+<li>如果尝试跑通的话</li>
+</ul>
+</li>
+<li>一些学习安排及记录
+<ul>
+<li>这就比较多了</li>
+</ul>
+</li>
+</ul>
+<p>有空也写下 About 页，讲下目前的近况吧。</p>
 </content:encoded>
     </item>
   </channel>

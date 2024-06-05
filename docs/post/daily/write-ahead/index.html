@@ -29,9 +29,10 @@
 
   <body class="theme-base-09 layout-reverse">
   <aside class="sidebar">
-  <div class="container sidebar-sticky">
+  <div id = "title" class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="/"><h1>IL随记</h1></a>
+      <a href="/">
+      <h1>IL随记</h1></a>
       <p class="lead">
        流水帐而已，随手写写 
       </p>
@@ -46,13 +47,20 @@
 
     <p>&copy; 2024. All rights reserved. </p>
   </div>
+  
+    <script type="text/javascript" src="/js/toc.js" defer></script>
+    <div id="toc" class="container sidebar-toc">
+      <div class="sidebar-toc-title">写在最前</div>
+      <nav id="TableOfContents"></nav>
+    </div>
+  
 </aside>
 
     <main class="content container">
     <h2>
   <a href="/">Home</a>
   
-  / <a href="/categories/%E6%97%A5%E5%B8%B8.html">日常</a>
+  / <a href="/categories/%E6%97%A5%E5%B8%B8/">日常</a>
 </h2>
 
 <div class="post">
@@ -95,6 +103,23 @@
 <p>有空也写下 About 页，讲下目前的近况吧。</p>
 
   
+
+
+
+  
+<div class="pagination">
+    <span class="pagination-item older">
+        
+        上一篇
+        
+    </span>
+    <span class="pagination-item newer">
+        
+        <a href="/post/tech/blog-build/" class="pag-link">下一篇</a>
+        
+    </span>
+</div>
+
 </div>
 
 <h2>Comments</h2>

@@ -29,9 +29,10 @@
 
   <body class="theme-base-09 layout-reverse">
   <aside class="sidebar">
-  <div class="container sidebar-sticky">
+  <div id = "title" class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="/"><h1>IL随记</h1></a>
+      <a href="/">
+      <h1>IL随记</h1></a>
       <p class="lead">
        流水帐而已，随手写写 
       </p>
@@ -46,13 +47,30 @@
 
     <p>&copy; 2024. All rights reserved. </p>
   </div>
+  
+    <script type="text/javascript" src="/js/toc.js" defer></script>
+    <div id="toc" class="container sidebar-toc">
+      <div class="sidebar-toc-title">博客修整及记录（进行中）</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#目前待办">目前待办</a></li>
+    <li><a href="#评论功能-disqus">评论功能 Disqus</a></li>
+    <li><a href="#favicon">favicon</a></li>
+    <li><a href="#rss-全文输出">RSS 全文输出</a></li>
+    <li><a href="#google-analytic">Google Analytic</a></li>
+    <li><a href="#使用-algolia-进行文章搜索">使用 algolia 进行文章搜索</a></li>
+    <li><a href="#其它注意点">其它注意点</a></li>
+  </ul>
+</nav>
+    </div>
+  
 </aside>
 
     <main class="content container">
     <h2>
   <a href="/">Home</a>
   
-  / <a href="/categories/%E6%8A%80%E6%9C%AF.html">技术</a>
+  / <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
 </h2>
 
 <div class="post">
@@ -65,17 +83,6 @@
 </em>
 
 
-<div class="related">
-    <ul class="related-tags">
-        <strong>Tags:</strong>
-        
-        <li>
-            <a href="/tags/%E6%97%A5%E5%B8%B8.html">#日常</a>
-        </li>
-        
-    </ul>
-</div>
-
 
 
 <hr>
@@ -85,13 +92,13 @@
 <li><input checked="" disabled="" type="checkbox"> 添加评论功能 Disqus</li>
 <li><input checked="" disabled="" type="checkbox"> favicon</li>
 <li><input checked="" disabled="" type="checkbox"> RSS 全文输出</li>
-<li><input disabled="" type="checkbox"> 增加文章搜索</li>
+<li><input disabled="" type="checkbox"> 增加文章搜索，使用 algolia search</li>
 <li><input checked="" disabled="" type="checkbox"> Google Analytic</li>
 <li><input checked="" disabled="" type="checkbox"> 头部添加文章时间、Tags 展示、Category 展示</li>
-<li><input disabled="" type="checkbox"> 添加文章目录 TOC，参考 <a href="https://ichochy.com/">https://ichochy.com/</a> 的效果</li>
+<li><input checked="" disabled="" type="checkbox"> 添加文章目录 TOC，参考 <a href="https://ichochy.com/">https://ichochy.com/</a> 的效果</li>
 <li><input disabled="" type="checkbox"> 代码展示效果优化</li>
-<li><input disabled="" type="checkbox"> 增加上一篇下一篇</li>
-<li><input disabled="" type="checkbox"> 增加相关文章</li>
+<li><input checked="" disabled="" type="checkbox"> 增加上一篇下一篇</li>
+<li><input checked="" disabled="" type="checkbox"> 增加相关文章</li>
 <li><input disabled="" type="checkbox"> 从 LogSeq 自动同步生成文章过来</li>
 </ul>
 <h2 id="评论功能-disqus">评论功能 Disqus</h2>
@@ -111,12 +118,39 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">services</span>]
 </span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">googleAnalytics</span>]
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">id</span> = <span style="color:#e6db74">&#39;G-xxx&#39;</span>
-</span></span></code></pre></div><h2 id="其它注意点">其它注意点</h2>
+</span></span></code></pre></div><h2 id="使用-algolia-进行文章搜索">使用 algolia 进行文章搜索</h2>
+<p>algolia 是个好东西，就是内容不太方便推过去，总不能一直跑个 node 程序。</p>
+<p>所以解决方案是：</p>
+<ol>
+<li>配一个 Github Action 跑 node 程序，把内容推到 algolia</li>
+<li>在 git push 时，触发 githook，本地去跑 node 程序，把内容推到 algolia</li>
+</ol>
+<p>用 Github Action 比较方便，我在其它环境下改文章也就不用去配置 node 环境了。</p>
+<p>参考文章： <a href="https://www.kiroule.com/article/automate-data-upload-to-algolia-index-with-github-actions/">https://www.kiroule.com/article/automate-data-upload-to-algolia-index-with-github-actions/</a></p>
+<p>TODO</p>
+<h2 id="其它注意点">其它注意点</h2>
 <ul>
 <li>需要将 hasCJKLanguage 设置成 true，否则 summaryLength 会以 word 为单位计算，而不是字符。</li>
 </ul>
 
   
+
+
+
+  
+<div class="pagination">
+    <span class="pagination-item older">
+        
+        <a href="/post/daily/write-ahead/" class="pag-link">上一篇</a>
+        
+    </span>
+    <span class="pagination-item newer">
+        
+        下一篇
+        
+    </span>
+</div>
+
 </div>
 
 <h2>Comments</h2>

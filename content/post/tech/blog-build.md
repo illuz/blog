@@ -1,7 +1,6 @@
 +++
 title = '博客修整及记录（进行中）'
 categories = ["技术"]
-tags = ["日常"]
 date = 2024-06-05T10:16:37+08:00
 draft = false
 +++
@@ -11,13 +10,13 @@ draft = false
 - [x] 添加评论功能 Disqus
 - [x] favicon
 - [x] RSS 全文输出
-- [ ] 增加文章搜索
+- [ ] 增加文章搜索，使用 algolia search
 - [x] Google Analytic
 - [x] 头部添加文章时间、Tags 展示、Category 展示
-- [ ] 添加文章目录 TOC，参考 https://ichochy.com/ 的效果
+- [x] 添加文章目录 TOC，参考 https://ichochy.com/ 的效果
 - [ ] 代码展示效果优化
-- [ ] 增加上一篇下一篇
-- [ ] 增加相关文章
+- [x] 增加上一篇下一篇
+- [x] 增加相关文章
 - [ ] 从 LogSeq 自动同步生成文章过来
 
 ## 评论功能 Disqus
@@ -54,6 +53,21 @@ Hugo 自带对 Disqus 的支持： https://gohugo.io/content-management/comments
   [services.googleAnalytics]
     id = 'G-xxx'
 ```
+
+## 使用 algolia 进行文章搜索
+
+algolia 是个好东西，就是内容不太方便推过去，总不能一直跑个 node 程序。
+
+所以解决方案是：
+
+1. 配一个 Github Action 跑 node 程序，把内容推到 algolia
+2. 在 git push 时，触发 githook，本地去跑 node 程序，把内容推到 algolia
+
+用 Github Action 比较方便，我在其它环境下改文章也就不用去配置 node 环境了。
+
+参考文章： https://www.kiroule.com/article/automate-data-upload-to-algolia-index-with-github-actions/
+
+TODO
 
 ## 其它注意点
 

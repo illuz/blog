@@ -8,28 +8,21 @@
     <loc>/</loc>
     <lastmod>2024-06-05T10:16:37+08:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>/post/</loc>
     <lastmod>2024-06-05T10:16:37+08:00</lastmod>
   </url><url>
-    <loc>/tech/</loc>
-    <lastmod>2024-06-05T10:16:37+08:00</lastmod>
-  </url><url>
-    <loc>/tech/blog-build/</loc>
+    <loc>/post/tech/blog-build/</loc>
     <lastmod>2024-06-05T10:16:37+08:00</lastmod>
   </url><url>
     <loc>/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2024-06-05T10:16:37+08:00</lastmod>
   </url><url>
-    <loc>/tags/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2024-06-05T10:16:37+08:00</lastmod>
-  </url><url>
-    <loc>/daily/</loc>
-    <lastmod>2024-06-04T21:38:57+08:00</lastmod>
-  </url><url>
-    <loc>/daily/write-ahead/</loc>
+    <loc>/post/daily/write-ahead/</loc>
     <lastmod>2024-06-04T21:38:57+08:00</lastmod>
   </url><url>
     <loc>/categories/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2024-06-04T21:38:57+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
   </url>
 </urlset>

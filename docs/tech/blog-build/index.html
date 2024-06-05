@@ -27,7 +27,7 @@
   
 </head>
 
-  <body class="theme-base-84 layout-reverse">
+  <body class="theme-base-09 layout-reverse">
   <aside class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -54,7 +54,11 @@
   <time datetime=2024-06-05T10:16:37&#43;0800 class="post-date">Wed, Jun 5, 2024</time>
   <h2 id="目前待办">目前待办</h2>
 <ul>
-<li><input disabled="" type="checkbox"> 添加评论功能 Disqus</li>
+<li><input checked="" disabled="" type="checkbox"> 添加评论功能 Disqus</li>
+<li><input checked="" disabled="" type="checkbox"> favicon</li>
+<li><input disabled="" type="checkbox"> 增加 RSS</li>
+<li><input disabled="" type="checkbox"> 增加文章搜索</li>
+<li><input disabled="" type="checkbox"> Google Analytic</li>
 <li><input disabled="" type="checkbox"> 头部添加文章时间、Tags 展示、Category 展示</li>
 <li><input disabled="" type="checkbox"> 添加文章目录 TOC，参考 <a href="https://ichochy.com/">https://ichochy.com/</a> 的效果</li>
 <li><input disabled="" type="checkbox"> 代码展示效果优化</li>
@@ -63,8 +67,14 @@
 <li><input disabled="" type="checkbox"> 从 LogSeq 自动同步生成文章过来</li>
 </ul>
 <h2 id="评论功能-disqus">评论功能 Disqus</h2>
-<p>Hugo 自带对 Disqus 的支持：https://gohugo.io/content-management/comments/</p>
-<p>差不多跟着配置就行了。</p>
+<p>Hugo 自带对 Disqus 的支持： <a href="https://gohugo.io/content-management/comments/">https://gohugo.io/content-management/comments/</a></p>
+<p>只要配置一下 hugo.toml 就行了，hyde 主题已经自带了 disqus 了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">services</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">disqus</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">shortname</span> = <span style="color:#e6db74">&#39;your-disqus-shortname&#39;</span>
+</span></span></code></pre></div><h2 id="favicon">favicon</h2>
+<p>随便弄了一个。</p>
+<h2 id="google-analytic">Google Analytic</h2>
 
 </div>
 

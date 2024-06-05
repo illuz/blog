@@ -6,7 +6,11 @@ draft = true
 
 ## 目前待办
 
-- [ ] 添加评论功能 Disqus
+- [x] 添加评论功能 Disqus
+- [x] favicon
+- [ ] 增加 RSS
+- [ ] 增加文章搜索
+- [ ] Google Analytic
 - [ ] 头部添加文章时间、Tags 展示、Category 展示
 - [ ] 添加文章目录 TOC，参考 https://ichochy.com/ 的效果
 - [ ] 代码展示效果优化
@@ -16,6 +20,19 @@ draft = true
 
 ## 评论功能 Disqus
 
-Hugo 自带对 Disqus 的支持：https://gohugo.io/content-management/comments/
+Hugo 自带对 Disqus 的支持： https://gohugo.io/content-management/comments/
 
-差不多跟着配置就行了。
+只要配置一下 hugo.toml 就行了，hyde 主题已经自带了 disqus 了。
+
+```toml
+[services]
+  [services.disqus]
+    shortname = 'your-disqus-shortname'
+```
+
+## favicon
+
+随便弄了一个。
+
+## Google Analytic
+

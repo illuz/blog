@@ -9,14 +9,23 @@ summaryLength = 4
 
 [params]
     description = "随手写写"
-    googleAnalytics = ""
+    googleAnalytics = "G-L6RWMNY4C6"
     layoutReverse = true
     theme = "hyde"
-    themeColor = "theme-base-84"
+    themeColor = "theme-base-09"
     toc = "tocbot"
 
+    [params.author]
+        email = 'hcbabitong@gmail.com'
+        name = 'IlluZ'
 
 [Menus]
   main = [
       {Name = "Github", URL = "https://github.com/illuz/"},
   ]
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']

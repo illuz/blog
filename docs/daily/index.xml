@@ -15,7 +15,32 @@
       <link>/daily/write-ahead/</link>
       <pubDate>Tue, 04 Jun 2024 21:38:57 +0800</pubDate><author>hcbabitong@gmail.com (IlluZ)</author>
       <guid>/daily/write-ahead/</guid>
-      <description>好久没写博客了，都快忘记之前写了啥了。&#xA;这次重新开个新博客，使用的是 Hugo 生成静态页面，而不是以及的 Hexo，因为我以前不会 Golang，现在会了一些 =w=，所以就试试吧。</description>
+      <description>好久没写博客了，都快忘记之前写了啥了。 这次重新开个新博客，使用的是 Hugo 生成静态页面，而不是以及的 Hexo，因为我以前不会 Golang，现在会了一些 =w=，所以就试试吧。 这次写博客主打一个随心，近年来人有</description>
+      <content:encoded><p>好久没写博客了，都快忘记之前写了啥了。</p>
+<p>这次重新开个新博客，使用的是 Hugo 生成静态页面，而不是以及的 Hexo，因为我以前不会 Golang，现在会了一些 =w=，所以就试试吧。</p>
+<p>这次写博客主打一个随心，近年来人有点颓废，对很多新鲜事物都没有深入去研究，技术也落后了不少，希望借写些博客来找回年轻时啥都想学的感觉。
+顺便也把一些事情整块地记录一下，把原来 LogSeq 和 Notion 中有的没有碎片整理成章。</p>
+<p>所以博客内容会很杂，希望未来的我能理解。</p>
+<p>近期可能会写的东西：</p>
+<ul>
+<li>Hugo 折腾的一些简单记录
+<ul>
+<li>目前还差：Google Analytic、Disqus、TOC、代码高亮、RSS、文章搜索</li>
+</ul>
+</li>
+<li>LogSeq 自动同步到 Hugo，然后发布博客
+<ul>
+<li>如果尝试跑通的话</li>
+</ul>
+</li>
+<li>一些学习安排及记录
+<ul>
+<li>这就比较多了</li>
+</ul>
+</li>
+</ul>
+<p>有空也写下 About 页，讲下目前的近况吧。</p>
+</content:encoded>
     </item>
   </channel>
 </rss>

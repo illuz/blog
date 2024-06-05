@@ -8,14 +8,82 @@
     <language>en</language>
     <managingEditor>hcbabitong@gmail.com (IlluZ)</managingEditor>
     <webMaster>hcbabitong@gmail.com (IlluZ)</webMaster>
-    <lastBuildDate>Tue, 04 Jun 2024 21:38:57 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jun 2024 10:16:37 +0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客修整及记录（进行中）</title>
+      <link>/tech/blog-build/</link>
+      <pubDate>Wed, 05 Jun 2024 10:16:37 +0800</pubDate><author>hcbabitong@gmail.com (IlluZ)</author>
+      <guid>/tech/blog-build/</guid>
+      <description>目前待办 添加评论功能 Disqus favicon RSS 全文输出 增加文章搜索 Google Analytic 头部添加文章时间、Tags 展示、Category 展示 添加文章目录 TOC，参考 https://ichochy.com/ 的效果 代码展示效果优化 增加上一篇下一篇 增加相关文章 从 LogSeq 自动同步生成文章过</description>
+      <content:encoded><h2 id="目前待办">目前待办</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 添加评论功能 Disqus</li>
+<li><input checked="" disabled="" type="checkbox"> favicon</li>
+<li><input checked="" disabled="" type="checkbox"> RSS 全文输出</li>
+<li><input disabled="" type="checkbox"> 增加文章搜索</li>
+<li><input checked="" disabled="" type="checkbox"> Google Analytic</li>
+<li><input checked="" disabled="" type="checkbox"> 头部添加文章时间、Tags 展示、Category 展示</li>
+<li><input disabled="" type="checkbox"> 添加文章目录 TOC，参考 <a href="https://ichochy.com/">https://ichochy.com/</a> 的效果</li>
+<li><input disabled="" type="checkbox"> 代码展示效果优化</li>
+<li><input disabled="" type="checkbox"> 增加上一篇下一篇</li>
+<li><input disabled="" type="checkbox"> 增加相关文章</li>
+<li><input disabled="" type="checkbox"> 从 LogSeq 自动同步生成文章过来</li>
+</ul>
+<h2 id="评论功能-disqus">评论功能 Disqus</h2>
+<p>Hugo 自带对 Disqus 的支持： <a href="https://gohugo.io/content-management/comments/">https://gohugo.io/content-management/comments/</a></p>
+<p>只要配置一下 hugo.toml 就行了，hyde 主题已经自带了 disqus 了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">services</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">disqus</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">shortname</span> = <span style="color:#e6db74">&#39;your-disqus-shortname&#39;</span>
+</span></span></code></pre></div><h2 id="favicon">favicon</h2>
+<p>随便弄了一个。</p>
+<h2 id="rss-全文输出">RSS 全文输出</h2>
+<p>将官方的 rss.xml 覆盖到 layouts/_default/rss.xml，然后在 description 后面加上 content 就行了：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>      <span style="color:#f92672">&lt;description&gt;</span>{{ .Summary | transform.XMLEscape | safeHTML }}<span style="color:#f92672">&lt;/description&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;content:encoded&gt;</span>{{ .Content | safeHTML }}<span style="color:#f92672">&lt;/content:encoded&gt;</span>
+</span></span></code></pre></div><h2 id="google-analytic">Google Analytic</h2>
+<p>按 hyde 主题的 readme 提示配置后没效果，发现新的 Hugo 配置变了，现在得使用下面的配置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">services</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">googleAnalytics</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">id</span> = <span style="color:#e6db74">&#39;G-xxx&#39;</span>
+</span></span></code></pre></div><h2 id="其它注意点">其它注意点</h2>
+<ul>
+<li>需要将 hasCJKLanguage 设置成 true，否则 summaryLength 会以 word 为单位计算，而不是字符。</li>
+</ul>
+</content:encoded>
+    </item>
     <item>
       <title>写在最前</title>
       <link>/daily/write-ahead/</link>
       <pubDate>Tue, 04 Jun 2024 21:38:57 +0800</pubDate><author>hcbabitong@gmail.com (IlluZ)</author>
       <guid>/daily/write-ahead/</guid>
-      <description>好久没写博客了，都快忘记之前写了啥了。&#xA;这次重新开个新博客，使用的是 Hugo 生成静态页面，而不是以及的 Hexo，因为我以前不会 Golang，现在会了一些 =w=，所以就试试吧。</description>
+      <description>好久没写博客了，都快忘记之前写了啥了。 这次重新开个新博客，使用的是 Hugo 生成静态页面，而不是以及的 Hexo，因为我以前不会 Golang，现在会了一些 =w=，所以就试试吧。 这次写博客主打一个随心，近年来人有</description>
+      <content:encoded><p>好久没写博客了，都快忘记之前写了啥了。</p>
+<p>这次重新开个新博客，使用的是 Hugo 生成静态页面，而不是以及的 Hexo，因为我以前不会 Golang，现在会了一些 =w=，所以就试试吧。</p>
+<p>这次写博客主打一个随心，近年来人有点颓废，对很多新鲜事物都没有深入去研究，技术也落后了不少，希望借写些博客来找回年轻时啥都想学的感觉。
+顺便也把一些事情整块地记录一下，把原来 LogSeq 和 Notion 中有的没有碎片整理成章。</p>
+<p>所以博客内容会很杂，希望未来的我能理解。</p>
+<p>近期可能会写的东西：</p>
+<ul>
+<li>Hugo 折腾的一些简单记录
+<ul>
+<li>目前还差：Google Analytic、Disqus、TOC、代码高亮、RSS、文章搜索</li>
+</ul>
+</li>
+<li>LogSeq 自动同步到 Hugo，然后发布博客
+<ul>
+<li>如果尝试跑通的话</li>
+</ul>
+</li>
+<li>一些学习安排及记录
+<ul>
+<li>这就比较多了</li>
+</ul>
+</li>
+</ul>
+<p>有空也写下 About 页，讲下目前的近况吧。</p>
+</content:encoded>
     </item>
   </channel>
 </rss>

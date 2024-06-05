@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="generator" content="Hugo 0.126.3">
@@ -12,10 +12,10 @@
   <meta name="description" content="" />
 
   
-  <link type="text/css" rel="stylesheet" href="//localhost:1313/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="//localhost:1313/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="//localhost:1313/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="//localhost:1313/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="/css/hyde.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
 
 
@@ -31,15 +31,15 @@
   <aside class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="//localhost:1313/"><h1>IL随记</h1></a>
+      <a href="/"><h1>IL随记</h1></a>
       <p class="lead">
-       随手写写 
+       流水帐而已，随手写写 
       </p>
     </div>
 
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="//localhost:1313/">Home</a> </li>
+        <li><a href="/">Home</a> </li>
         <li><a href="https://github.com/illuz/"> Github </a></li>
       </ul>
     </nav>
@@ -49,17 +49,45 @@
 </aside>
 
     <main class="content container">
-    <div class="post">
+    <h2>
+  <a href="/">Home</a>
+  
+  / <a href="/categories/%E6%8A%80%E6%9C%AF.html">技术</a>
+</h2>
+
+<div class="post">
   <h1>博客修整及记录（进行中）</h1>
-  <time datetime=2024-06-05T10:16:37&#43;0800 class="post-date">Wed, 2024-06-05 10:16</time>
+  
+<em>
+    <time datetime=2024-06-05T10:16:37&#43;0800 class="post-date">
+        <b>创建时间：</b>2024/06/05 10:16
+    </time>
+</em>
+
+
+<div class="related">
+    <ul class="related-tags">
+        <strong>Tags:</strong>
+        
+        <li>
+            <a href="/tags/%E6%97%A5%E5%B8%B8.html">#日常</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+<hr>
+
   <h2 id="目前待办">目前待办</h2>
 <ul>
 <li><input checked="" disabled="" type="checkbox"> 添加评论功能 Disqus</li>
 <li><input checked="" disabled="" type="checkbox"> favicon</li>
-<li><input disabled="" type="checkbox"> 增加 RSS</li>
+<li><input checked="" disabled="" type="checkbox"> RSS 全文输出</li>
 <li><input disabled="" type="checkbox"> 增加文章搜索</li>
-<li><input disabled="" type="checkbox"> Google Analytic</li>
-<li><input disabled="" type="checkbox"> 头部添加文章时间、Tags 展示、Category 展示</li>
+<li><input checked="" disabled="" type="checkbox"> Google Analytic</li>
+<li><input checked="" disabled="" type="checkbox"> 头部添加文章时间、Tags 展示、Category 展示</li>
 <li><input disabled="" type="checkbox"> 添加文章目录 TOC，参考 <a href="https://ichochy.com/">https://ichochy.com/</a> 的效果</li>
 <li><input disabled="" type="checkbox"> 代码展示效果优化</li>
 <li><input disabled="" type="checkbox"> 增加上一篇下一篇</li>
@@ -74,8 +102,21 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">shortname</span> = <span style="color:#e6db74">&#39;your-disqus-shortname&#39;</span>
 </span></span></code></pre></div><h2 id="favicon">favicon</h2>
 <p>随便弄了一个。</p>
-<h2 id="google-analytic">Google Analytic</h2>
+<h2 id="rss-全文输出">RSS 全文输出</h2>
+<p>将官方的 rss.xml 覆盖到 layouts/_default/rss.xml，然后在 description 后面加上 content 就行了：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>      <span style="color:#f92672">&lt;description&gt;</span>{{ .Summary | transform.XMLEscape | safeHTML }}<span style="color:#f92672">&lt;/description&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;content:encoded&gt;</span>{{ .Content | safeHTML }}<span style="color:#f92672">&lt;/content:encoded&gt;</span>
+</span></span></code></pre></div><h2 id="google-analytic">Google Analytic</h2>
+<p>按 hyde 主题的 readme 提示配置后没效果，发现新的 Hugo 配置变了，现在得使用下面的配置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">services</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">googleAnalytics</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">id</span> = <span style="color:#e6db74">&#39;G-xxx&#39;</span>
+</span></span></code></pre></div><h2 id="其它注意点">其它注意点</h2>
+<ul>
+<li>需要将 hasCJKLanguage 设置成 true，否则 summaryLength 会以 word 为单位计算，而不是字符。</li>
+</ul>
 
+  
 </div>
 
 <h2>Comments</h2>
@@ -100,6 +141,28 @@
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </main>
+
+    
+      
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6RWMNY4C6"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-L6RWMNY4C6');
+        }
+      </script>
+    
+  
+
 
     
   </body>
